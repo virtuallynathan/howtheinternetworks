@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Learn about the Internet!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+    $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  }); </script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">The Internet</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">What runs the Internet?</li>
+                <li><a href="#homegateway">Home Gateway</a></li>
+                <li><a href="#modem">Modem</a></li>
+                <li><a href="#cmts">Subscriber Line Termination</a></li>
+                <li><a href="#switch">Aggregation Switch</a></li>
+                <li><a href="#edgerouter">Edge Router</a></li>
+                <li><a href="#corerouter">Core Router</a></li>
+                <li><a href="#optical">Optical Transport</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Where is the Internet?</li>
+                <li><a href="#equinix">Carrier Hotels</a></li>
+                <li><a href="#exchanges">Internet Exchanges</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    <br/><br/><br/>
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Welcome to the Internet</h1>
+        <p>This website is designed to teach you about how the internet works. We will follow the path of a packet from your home to one of the internet hubs and beyond.</p>
+        <p>To begin learning, just scroll down!</p>
+      </div>
+
+      <div class="media">
+      <a class="pull-left" href="#homegateway" id="gateway">
+        <img class="media-object" src="bootstrap/img/linksys.jpg" alt="Wireless Router" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Home Gateway</h4>
+        For many computer users, the classic Linksys blue home gateway may be what they think of as "The Internet", so lets start there. This wireless home gateway is connected to a modem or other device via Ethernet. It then uses an internal ethernet switch and wireless modem to provide access to multiple clients simultaneously. The router makes use of NAT, or network address translation to multiplex TCP and UDP packets while using only a single externally reachable IP address. 
+        <br/><br/>
+        A typical modern home gateway contains five 1GbE ethernet ports - one uplink and four switchports, and supports 802.11ac the latest high-bandwidth wireless standard supporting up to 1.3Gbps of wireless throughput. 
+
+      </div>
+    </div>
+
+      <div class="media">
+      <a class="pull-left" href="#modem" id="modem">
+        <img class="media-object" src="bootstrap/img/cablemodem.jpg" alt="Cable Modem" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Modem</h4>
+        The modem acts as a media converter between, in this case, a coaxial cable carrying DOCSIS (Data over cable service interface specification) data using quadrature amplitude modulation (QAM) and Ethernet. This could just as well be a DSL, or digital subscriber line connection over twisted pair cable, which carries data using discrete multitone modulation (DMT), or an ONT, optical network terminal, which carries data using time division multiplexing (TDM) and asynchronous transfer mode (ATM). The frequencies are de-multiplexed and demodulated and converted into Ethernet frames in the modem. In some cases, the modem will have a router integrated. 
+        <br/> <br/>
+        Modern DOCSIS modems are capable of up to 900Mbps using 24 channels, while DSL modems are limited to around 50Mbps. 
+      </div>
+    </div>
+
+     <div class="media">
+      <a class="pull-left" href="#cmts" id="cmts">
+        <img class="media-object" src="bootstrap/img/cmts.jpg" alt="CMTS" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Subscriber line termination</h4>
+        The modem communicates back to a central office or telephone exchange, which contains equipment to create the signals that travel over the coaxial, twisted pair, or fiber optic cabling. The item pictured is a cable modem termination system, which converts ethernet frames to DOCSIS frames to then be  sent to a particular cable modem. A DSLAM, or Digital subscriber line access multiplexer operates in a similar fashion. Between the subscriber and the CMTS or DSLAM there may be other aggregation devices such as fiber nodes which convert the signals from coaxial cable to fiber optical cables for longer distance transmission. Each CMTS may aggregate and manage the connections of over 20,000 cable modems. This device has 1 or more ethernet interfaces, generally fiber optic, to uplink to a router. 
+        <br/><br/>
+        The device pictured, an Arris E6000 CMTS, has sixteen 10GbE SFP+ (Small form factor pluggable optics) connections, across 2 routing linecards. It supports up to 128 downstream channels (38Mbps each) or up to 24 upstream channels (30Mbps each) in each of the 12 CAM (cable access module) slots. 
+      </div>
+    </div>
+
+    <div class="media">
+      <a class="pull-left" href="#switch" id="switch">
+        <img class="media-object" src="bootstrap/img/ex4500.jpg" alt="Switch" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Aggregation Switch</h4>
+        In large cities, many CMTSs or DSLAMs may be required to provide service to a neighborhood or area. If all of these subscriber termination units reside in the same headend or telephone exchange, the operator may wish to aggregate the bandwidth utilized by this hardware using cheaper switches before connecting it to a more expensive router port. This switch provides the internet uplinks to these devices, and the subscribers. This allows the network operator to increase efficiency by aggregating capacity at the edge of the network. 
+        <br/> <br/>
+        The device pictured is a Juniper Networks EX4500, it has forty 10GbE SFP+ (Small form factor pluggable optics) connections, and two 40GbE QSFP+ (quad SFP+) uplink connections. 
+      </div>
+    </div>
+
+      <div class="media">
+      <a class="pull-left" href="#edgerouter" id="edgerouter">
+        <img class="media-object" src="bootstrap/img/mx480.jpg" alt="Edge Router" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Edge Router</h4>
+        Multiple aggregation switches can be connected to an edge router,  and is likely the first device to perform any real routing function. Some routing may be run on the aggregation switch, but not necessarily. This device can aggregate multiple 10GbE or 40GbE connections to the core of the network. This router would likely run an interior gateway protocol (IGP) such as IS-IS, OSPF, or iBGP. Some business customers may be connected to the edge router via an exterior gateway protocol (EGP), such as BGP. 
+        <br/><br/>
+        The router pictured is a Juniper MX480, it has 6 line card slots with up to 32 10GbE SFP+, or 2 100GbE CFP plus 4 10GbE SPF+ connections per line card for a total of up to 192 10GbE ports or 12 100GbE and 24 10GbE ports. 
+        <br/> <br/>
+        This Edge router may be part of a Regional Area Network (RAN) or Metro Area Network (MAN), consisting of multiple central offices or telephone exchanges. 
+      </div>
+    </div>
+
+      <div class="media">
+      <a class="pull-left" href="#corerouter" id="corerouter">
+        <img class="media-object" src="bootstrap/img/corerouter.jpg" alt="Core Router" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Core Router</h4>
+      A number of Regional or Metro networks will be aggregated at a Core routing site. These sites are strategically chosen at locations where many other networks have a presence. Core routers are extremely powerful, and contain many line cards. Some core routers are "multichassis", including the one pictured, meaning that many chassis can be connected together to act as a more powerful single router. The router pictured is a Cisco CRS-X (Carrier Routing System). One the left is the CRS-X 16 Slot chassis, followed by the 24 slot fabric chassis (for building a multi-chassis system), and on the right there are 2 CRS-X 8 slot chassis. The CRS-X has up to 4 100GbE CFP connections per linecard, for a total of 64 100GbE connections per chassis. To connect to another router in another part of the country or world, the ports are connected to a packet optical transport system to carrier the data as a wave on a fiber optical cable.
+      <br/> <br/>
+      Core routers are generally placed at strategic places around the globe, and in the case of large, global networks, this includes cities such as: London, Amsterdam, Frankfurt, New York, Ashburn, and Chicago, to name a few. This will be covered in more detail later. Read about <a href="#exchanges"> Internet Exchanges</a>
+      </div>
+    </div>
+
+      <div class="media">
+      <a class="pull-left" href="#optical" id="optical">
+        <img class="media-object" src="bootstrap/img/transport.jpg" alt="Optical Transport" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Packet Optical Transport</h4>
+      The core routers in a network are connected using optical transport, which supports aggregating multiple 10, 40, or 100GbE waves onto a single fiber optical cable. This is achieved using DWDM, or dense wave division multiplexing. Each wave on the ITU grid carries a 10, 40, or 100GbE channel, and there may be as many 96 waves on a single fiber. The hardware pictured is an Infinera DTN-X, which is capable of aggregating up to 250 10GbE connections on to a single fiber - that is 2.5Tbps! Using multiple chassis, over 24Tbps can be placed on a single optical fiber. The optical transport space has been advancing quickly, making use of Coherent optical technology, forward error correction, electronic dispersion compensation, and raman amplification to boost capacity and reach.
+      <br/> <br/>
+      Amplifiers may be required every 50-100km depending on the type of fiber optic cable used, and the modulation of the optical signals. DP-QPSK can travel farther than 16-QAM without amplification, but the maximum data rate is smaller due to the reduced spectral efficiency of the DP-QPSK coding. This allows providers to tune the optical reach and capacity to the optimum for their deployment - it may be possible to transport fewer channels over huge distances, in the thousands of kilometers.
+    
+      </div>
+    </div>
+
+       <div class="jumbotron">
+        <h1>Where is the Internet?</h1>
+        <p>The internet is more of a physical than one might think. The Internet, at its core, is a collection of interconnected routers, and interconnected groups of routers called autonomous systems. These routers, and their interconnections are housed in only a buildings around the world. In this section we will dive into these locations.</p>
+        <p>Lets go!</p>
+      </div>
+
+          <div class="media">
+      <a class="pull-left" href="#equinix" id="equinix">
+        <img class="media-object" src="bootstrap/img/equinix.jpg" alt="Equinix Logo" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Carrier Hotels</h4>
+      As mentioned above, networks chose to colocate their equipment inside of carrier-neutral facilities around the globe. This allows the carriers to sell their services out of that data center, as well as connect to many other networks. Many of these facilities are rather famous in the networking world for their density of unique internet service providers, or carriers. These buildings are aptly named "Carrier Hotels". Equinix is a data center operator who runs a number of these carrier hotels. Equinix was founded during the dot-com boom, and grew rapidly until the bubble burst. After a few slow years, their growth continued and they are still one of the largest players in the data center industry.  
+      <br/> <br/>
+      Equinix operates one of the most popular Internet Exchange fabrics in the US, which will be discussed in detail later. 
+    
+      </div>
+    </div>
+
+
+          <div class="media">
+      <a class="pull-left" href="#echanges" id="exchanges">
+        <img class="media-object" src="bootstrap/img/amsix.jpg" alt="AMS-IX logo" style="max-height: 500px; max-width: 500px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Internet Exchanges</h4>
+      Internet Exchanges were created as part of the natural growth of the internet. Internet service providers needed places to pass traffic between each other, and these locations were started in the early 1990s as NAPs or Network Access Points. One of the most famous was operated by MCI, MAE-East and MAE-West. These were quite large exchanges with over 80 members at peak. These exchanges were operated by ISPs, and were only really operated for business reasons. When it no longer made business sense to operate the exchanges, there were shut down. 
+      <br/> <br/>
+      In Europe, the model was slightly different, as the internet exchanges tend to be operated by non-profit organizations. The exchange pictured is the Amsterdam Internet Exchange or AMS-IX. It was founded in 1994 by CERN as a way to exchange scientific traffic, but allowed other carriers to connect as well. The AMS-IX organization was founded in 1997, and has been around since then. The exchange now sees peak traffic of over 2.5Tbps. Over 600 unique networks are connected to AMS-IX. 
+    <br/> <br/>
+      Other popular exchanges include LINX, the London Internet Exchange; DECIX, the Deutsch Commercial Internet Exchange; NETNOD, a swedish internet exchange; PLIX, the Polish Internet Exchange, and many others. An organization called Euro-IX has been founded to try and agree on policies across all of the european internet exchanges. 
+ <br/> <br/>
+ In the US, many exchanges are operated by data center providers, such as Equinix and Coresite. This is beginning to change, as network operators prefer the transparent, non-profit, community governed approach of the European internet exchanges like AMS-IX. Members of NANOG (The North American Network Operators Group) have formed a group called Open-IX dedicated to expanding the presence of european-style Internet Exchanges in North America. This has thus far been a successful effort: LINX has formed LINX NoVA an Internet Exchange in Northern Virginia / Washington, DC, and both AMS-IX and DECIX have opened exchanges in the New York City metro area.  
+
+    
+      </div>
+    </div>
+
+          <div class="media">
+      <a class="pull-left" href="#exchanges" id="exchangesmap">
+        <img class="media-object" src="bootstrap/img/map.png" alt="Internet Exchange Map" style="max-height: 1500px; max-width: 950px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Internet Exchanges Map</h4>
+      This is a map of the most important and largest internet exchanges around the world. Connecting at any one of these sites provides access to at least 50, but as many as 800 unique networks. Over 20Tbps of traffic is passed between networks on the map above across exchange fabrics alone. This does not include private interconnects.
+      </div>
+    </div>
+
+
+          <div class="media">
+      <a class="pull-left" href="#providers" id="he">
+        <img class="media-object" src="bootstrap/img/hemap.png" alt="Hurricane Electric" style="max-height: 1500px; max-width: 950px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Provider Network Map</h4>
+      This is a map showing the network locations and paths where the global network operators Hurricane Electric, GTT (TiNET), NTT America, TeliaSonera, Hibernia Atlantic (Atrato IP), and Cogent have Points of Presence. They all have roughly the same network layout, which correlates to the locations of Internet Exchanges around the world. Hurricane Electric is a small california based ISP, and a tier-2 provider. The concept of network provider tiers will be explained later. 
+      </div>
+    </div>
+              <div class="media">
+      <a class="pull-left" href="#providers" id="gtt">
+        <img class="media-object" src="bootstrap/img/gttmap.png" alt="GTT" style="max-height: 1500px; max-width: 950px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Provider Network Map</h4>
+      This is GTTs network map. GTT recently purchased nLayer and TiNET. A tier-1 provider. 
+      </div>
+    </div>
+              <div class="media">
+      <a class="pull-left" href="#providers" id="ntt">
+        <img class="media-object" src="bootstrap/img/nttmap.png" alt="NTT" style="max-height: 1500px; max-width: 950px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Provider Network Map</h4>
+     This is NTTs network map. NTT is a Japanese telco, with their network focused on Asia but expanding in Europe and North America. A tier-1 provider. 
+      </div>
+    </div>
+    <br/>
+       <div class="jumbotron">
+        <h1>Who runs the Internet?</h1>
+        <p>The internet, and the relationships between networks and companies are managed by surprisingly few people - the network engineers and peering coordinators of 
+        the networks that make up the tier 1 and 2 networks (and sometimes tier 3). </p>
+        <p>Lets go!</p>
+      </div>
+
+              <div class="media">
+      <a class="pull-left" href="#relationships" id="relationships">
+        <img class="media-object" src="bootstrap/img/relationships.png" alt="Internet Relationships" style="max-height: 1300px; max-width: 750px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Relationships on the Internet</h4>
+     There are only a few types of relationships between networks on the internet: Peering (Settlement-free Interconnection), Paid Peering, and Transit. 
+      </div>
+    </div>
+
+                  <div class="media">
+      <a class="pull-left" href="#transit" id="transit">
+        <img class="media-object" src="bootstrap/img/transit.png" alt="Transit" style="max-height: 1300px; max-width: 750px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Transit</h4>
+     Transit is essentially wholesale internet access. It can be purchased from tier-1 and tier-2 networks at their Points of Presence in datacenters around the world. It is generally priced in $ per Megabit. Customers can purchase multiple 1GbE, 10GbE or 100GbE ports with variable amounts of committed utilization. A customer may choose to buy 5Gbps on a 10GbE port, so that they may grow later, instead of purchasing 5 1GbE ports.
+      </div>
+    </div>
+
+                <div class="media">
+      <a class="pull-left" href="#peering" id="peering">
+        <img class="media-object" src="bootstrap/img/peering.png" alt="Internet Relationships" style="max-height: 1300px; max-width: 750px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Peering</h4>
+    Peering, or Settlement-free Interconnection, is when two networks agree that it is mutually beneficial for them to connect their networks without monetary exchange. This is generally the case if the amount of traffic being sent or received is roughly balanced, or if huge amounts of traffic are coming from one particular provider over a networks transit ports. This second situation is undesirable as you would essentially be paying the transit provider for traffic you could potentially receive for free. 
+      </div>
+    </div>
+
+    <div class="media">
+      <a class="pull-left" href="#tiers" id="tiers">
+        <img class="media-object" src="bootstrap/img/tier1.png" alt="The Tiers of the Internet" style="max-height: 1300px; max-width: 750px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Tiers of the Internet</h4>
+        The Internet, at its core, consits of an area called the "Default Free Zone" - traffic between companies, know an Tier 1 internet service providers, is exchanged without monetary exchange, and these networks each have a complete BGP table and need no default route to send traffic. This collection of ISPs is rather small, consisting of: Level3 Communications, Verizon Business, AT&T, Sprint, Zayo, CenturyLink, GTT, XO Communications, Tata Communications, NTT Communications and TeliaSonera. These 11 internet service providers make up the core of the internet by peering freely at every mutual location. Because of this, most internet traffic crosses over one of these networks. All other internet service providers that wish to reach the rest of the internet must buy transit from one of these 11 carriers, or another provider who does. JANET, the UK educational research network purchases transit from Level3 Communications, TeliaSonera, and GTT.
+        <br/><br/>
+        While there may be no true "Global" Tier 1 ISPs, the main Tier 1 providers listed above have relationships with most or all of the regional Tier 1 ISPs for any given region. See <a href="http://drpeering.net/FAQ/Are-there-global-Tier-1-ISPs.php"> Dr. Peering </a> for more information.
+    </div>
+    </div>
+
+       <div class="jumbotron">
+        <h1>Next Section(s)</h1>
+        <p>Eyeballs and CDNs <br/>
+           Routing and ASs (EGP/IGP, BGP, OSPF Simulator) <br/>
+           Explaining a traceroute<br/>
+
+       </p>
+        <p>Lets go!</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
