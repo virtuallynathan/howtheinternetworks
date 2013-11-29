@@ -1,0 +1,106 @@
+svg {
+  background-color: #FFF;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+path.link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4px;
+  cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 2.5px;
+}
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+.name {
+  stroke: #999;
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.node {
+  fill: #eee;
+  cursor: crosshair;
+  stroke: #999;
+  stroke-width: 1.5px;
+}
+
+.node_selected {
+  fill: #ff7f0e;
+  stroke: #ff7f0e;
+}
+
+.node_selected text {
+  stroke: #fff;
+}
+
+.drag_line {
+  stroke: #999;
+  stroke-width: 5;
+  pointer-events: none;
+}
+
+.drag_line_hidden {
+  stroke: #999;
+  stroke-width: 0;
+  pointer-events: none;
+}
+
+.link {
+  stroke: #999;
+  stroke-width: 5;
+  cursor: crosshair;
+}
+
+.link_selected {
+  stroke: #ff7f0e;
+}
+
+.cost-rect {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1px;
+}

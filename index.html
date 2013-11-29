@@ -7,6 +7,8 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <title>Learn about the Internet!</title>
 
+<link rel="stylesheet" href="app.css">
+<script src="http://d3js.org/d3.v2.js"></script>
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -375,9 +377,32 @@
         <br/> <br/>
         We have built an OSPF simulator using <a href="http://d3js.org/">D3.js</a> and JavaScript:
         <br/> <br/>
-    </div>
-    </div>
 
+
+    </div>
+        <div> <!-- Hamish in the house -->
+
+  <div id="chart" style="float: left;">
+  <h1 style="text-align: center;">Network</h1>
+  </div>
+  <div id="chart2" style="float: left;">
+  <h1 style="text-align: center;">Shortest paths</h1>
+  </div>
+  <!--<div id="chart3" style="float: left;">
+  <h1 style="text-align: center;">Visited</h1>
+  </div>
+  <div id="chart4" style="float: left;">
+  <h1 style="text-align: center;">Shortest paths</h1>
+  </div>-->
+<script src="networkGraph.js"></script>
+<script src="app.js"></script>
+<div style="clear: both;">
+<input name="from-node" id="from-node" value=""/>
+<button type="button" onclick="shortestPath();">Do it up</button>
+</div>
+
+    <!-- Hamish has left the building -->
+    </div>
 
              <div class="jumbotron">
         <h1>Next Section(s)</h1>
