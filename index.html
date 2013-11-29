@@ -214,7 +214,7 @@
       <br/> <br/>
       In Europe, the model was slightly different, as the internet exchanges tend to be operated by non-profit organizations. The exchange pictured is the Amsterdam Internet Exchange or AMS-IX. It was founded in 1994 by CERN as a way to exchange scientific traffic, but allowed other carriers to connect as well. The AMS-IX organization was founded in 1997, and has been around since then. The exchange now sees peak traffic of over 2.5Tbps. Over 600 unique networks are connected to AMS-IX. 
     <br/> <br/>
-      Other popular exchanges include <a href="https://www.linx.net/">LINX, the London Internet Exchange</a>; <a href="http://www.de-cix.net/">DECIX, the Deutsch Commercial Internet Exchange</a>;<a href="http://www.netnod.se/">NETNOD, a swedish internet exchange</a>; <a href="http://www.plix.pl/pl">PLIX, the Polish Internet Exchange</a>, and many others. An organization called <a href="https://www.euro-ix.net/">Euro-IX</a> has been founded to try and agree on policies across all of the european internet exchanges. 
+      Other popular exchanges include <a href="https://www.linx.net/">LINX, the London Internet Exchange</a>; <a href="http://www.de-cix.net/">DECIX, the Deutsch Commercial Internet Exchange</a>; <a href="http://www.netnod.se/">NETNOD, a swedish internet exchange</a>; <a href="http://www.plix.pl/pl">PLIX, the Polish Internet Exchange</a>, and many others. An organization called <a href="https://www.euro-ix.net/">Euro-IX</a> has been founded to try and agree on policies across all of the european internet exchanges. 
  <br/> <br/>
  In the US, many exchanges are operated by data center providers, such as Equinix and Coresite. This is beginning to change, as network operators prefer the transparent, non-profit, community governed approach of the European internet exchanges like AMS-IX. Members of <a href="http://nanog.org/">NANOG (The North American Network Operators Group)</a> have formed a group called <a href="https://ripe66.ripe.net/presentations/266-oixp-marty-v2.pdf">Open-IX</a> dedicated to expanding the presence of european-style Internet Exchanges in North America. This has thus far been a successful effort: LINX has formed <a href="https://www.linx.net/service/publicpeering/nova">LINX NoVA</a>, an Internet Exchange in Northern Virginia / Washington, DC, and both <a href="https://nynj.ams-ix.net/">AMS-IX</a> and <a href="http://nyc.de-cix.net/about/">DECIX</a> have opened exchanges in the New York City metro area.  
 
@@ -317,6 +317,33 @@
     </div>
 
        <div class="jumbotron">
+        <h1>Types of Networks</h1>
+        <p>Networks on The Internet are generally broken into 2 categories: Content creators / hosters, and content consumers. These are otherwise know, respectively, as Content Heavy networks, and Eyeball Networks.
+       </p>
+        <p>Lets go!</p>
+      </div>
+
+          <div class="media">
+      <a class="pull-left" href="#CDN" id="CDN">
+        <img class="media-object" src="bootstrap/img/cdnakamai.gif" alt="Content Delivery Networks" style="max-height: 1300px; max-width: 750px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Content Heavy Networks</h4>
+        The first type of network is a content delivery or content heavy network. These networks serve to deliver content to end users on behalf of other companies. For example, Apple uses Akamai to deliver iTunes content. Akamai is one of the largest CDN networks, representing over 20% of peak time global internet traffic. Other such CDNs include Limelight Networks, Level3, Highwinds, and Amazon. Other networks are not specifically hosting content for other companies, but may host many popular websites or servers - such networks include OVH, Leaseweb, and Amazon. According to <a href="http://www.monkey.org/~labovit/papers/gpf_2011.pdf">research from Arbor Networks</a>, and their Chief Scientist Craig Labovitz, networks he has dubbed "hypergiants" represent huge percentages of total inter-domain internet traffic.
+    </div>
+    </div>
+          <div class="media">
+      <a class="pull-left" href="#CDN" id="CDN">
+        <img class="media-object" src="bootstrap/img/Comcast.png" alt="Comcast Logo" style="max-height: 1300px; max-width: 750px;">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">Eyeball Networks</h4>
+        The second major network type is the Eyeball network. These networks are responsible for consuming huge percentages of the traffic served by content heavy networks and content delivery networks. These networks are generally home and business internet service providers, such as Comcast, who have millions or even tens of millions of internet customers. It is stated in the <a href="https://www.sandvine.com/downloads/general/global-internet-phenomena/2013/sandvine-global-internet-phenomena-report-1h-2013.pdf">Sandvine global internet phononena report</a> that over 50% of peak time internet traffic in the United States is from Netflix and YouTube alone. 
+    </div>
+    </div>
+
+
+             <div class="jumbotron">
         <h1>Next Section(s)</h1>
         <p>Eyeballs and CDNs <br/>
            Routing and ASs (EGP/IGP, BGP, OSPF Simulator) <br/>
