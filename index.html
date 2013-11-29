@@ -391,9 +391,12 @@
         <img class="media-object" src="bootstrap/img/traceroute.png" alt="Traceroute / MTR" style="max-height: 1300px; max-width: 750px;">
       </a>
       <div class="media-body">
-        <h4 class="media-heading">OSPF</h4>
-       OSPF is an implementation of the shortest path first algorithm invented by <a href="http://www-history.mcs.st-andrews.ac.uk/Biographies/Dijkstra.html">Edsger Dijkstra.</a> The algorithm is designed to find the shortest path through a graph with non-negative edge path costs, which produces a shortest path tree.
-        <br/> <br/>
+        <h4 class="media-heading">Traceroute</h4>
+      The traceroute to the left is from a server in New York to the St Andrews computer science network. As we can see, the path goes via Newark, New York, London, and Manchester (where JANET purchases 3 10GbE ports from Level3) before moving into the JANET6 network and going up to Leeds, Dundee, and finally back down to St Andrews. A keen observer might notice that the latency jumps from around 1ms to 76ms after the first hop - this is not because the latency between the 2nd and 3rd hop is huge, it is due to the fact that Level3 operates an MPLS core, and implements ICMP tunneling. This means that the ICMP packet makes it all the way to the edge of the Level3 network before a response is issued. 
+      <br/><br/>
+      This network is connected to a Juniper router on the edge of Level3's network - xe is the abbreviation for 10GbE on a Juniper router. This edge router will run a full BGP table, and tag incoming packets with an MPLS label. MPLS, or multi-protocol label switching prevents each router on the network from having to contain the whole BGP routing table. It reduces the intelligence needed in the core of the network, by pushing it to the edge. Paths in the network are defined by Label Switch Paths (LSPs), which can be planned out using complicated planning software. This allows network operators to plan for failures and make sure traffic keeps flowing without interuption or congestion. The packets are carried over the network using multiple 10GbE or larger links, called aggregate ethernet or "ae".
+      <br/><br/>
+
 
     </div>
     </div>
