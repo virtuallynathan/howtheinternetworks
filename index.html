@@ -406,9 +406,9 @@
     </div>
 
              <div class="jumbotron">
-        <h1>Next Section(s)</h1>
+        <h1>Exploring the Internet</h1>
         <p> 
-           Explaining a traceroute<br/>
+           Traceroute is a neat tool included in most operating systems. It works by sending packets with an increasing time-to-live or TTL, and recording the IP of each hop it recieves an ICMP response from. This allows it to build a list of hops on the path to a destination host or IP address. <br/>
        </p>
         <p>Lets go!</p>
       </div>
@@ -422,6 +422,7 @@
       <br/><br/>
       This network is connected to a Juniper router on the edge of Level3's network - xe is the abbreviation for 10GbE on a Juniper router. This edge router will run a full BGP table, and tag incoming packets with an MPLS label. MPLS, or multi-protocol label switching prevents each router on the network from having to contain the whole BGP routing table. It reduces the intelligence needed in the core of the network, by pushing it to the edge. Paths in the network are defined by Label Switch Paths (LSPs), which can be planned out using complicated planning software. This allows network operators to plan for failures and make sure traffic keeps flowing without interuption or congestion. The packets are carried over the network using multiple 10GbE or larger links, called aggregate ethernet or "ae".
       <br/><br/>
+      More information can be found here, in <a href="/bootstrap/img/traceroute.pdf"> Richard Steenbergen's NANOG presentation on traceroute</a>
 
 
     </div>
