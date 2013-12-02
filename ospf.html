@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <title>Learn about the Internet!</title>
+
+    <link rel="stylesheet" href="app.css">
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46011062-1', 'autonomoussystem.net');
+  ga('send', 'pageview');
+
+  </script>
+
+    <script>
+    $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  }); </script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">The Internet</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">What runs the Internet?</li>
+                <li><a href="index.html#homegateway">Home Gateway</a></li>
+                <li><a href="index.html#modem">Modem</a></li>
+                <li><a href="index.html#cmts">Subscriber Line Termination</a></li>
+                <li><a href="index.html#switch">Aggregation Switch</a></li>
+                <li><a href="index.html#edgerouter">Edge Router</a></li>
+                <li><a href="index.html#corerouter">Core Router</a></li>
+                <li><a href="index.html#optical">Optical Transport</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Where is the Internet?</li>
+                <li><a href="index.html#equinix">Carrier Hotels</a></li>
+                <li><a href="index.html#exchanges">Internet Exchanges</a></li>
+                <li class="dropdown-header">Relationships on the Internet?</li>
+                <li><a href="index.html#transit">Transit</a></li>
+                <li><a href="index.html#peering">Peering</a></li>
+                <li><a href="index.html#tiers"> Tiers</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="ospf.html">Dijkstra's algorithm</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+    <br/><br/><br/>
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><img height="180" src="dijkstra.jpg" style="float: right;"/>
+        <h1>Dijkstra's algorithm</h1>
+        <p>learn all about it</p>
+        <p>draw a network, click the button</p>
+      </div>
+
+      <div class="media">   
+
+      <div id="chart" style="float: left;">
+        <h1 style="text-align: center;">Network</h1>
+      </div>
+      <div id="chart2" style="float: left;">
+        <h1 style="text-align: center;">Shortest paths</h1>
+      </div>
+      <!--<div id="chart3" style="float: left;">
+        <h1 style="text-align: center;">Nodes</h1>
+      </div>-->
+      <!--<div id="chart4" style="float: left;">
+      <h1 style="text-align: center;">Shortest paths</h1>
+      </div>-->
+      <div style="clear: both;">
+        <input name="from-node" id="from-node" value=""/>
+        <button type="button" onclick="shortestPath();">Button #1</button>
+        <button type="button" onclick="stepPath();">Button #2</button>
+      </div>
+
+      </div><!-- /media -->
+
+
+    </div><!-- /container -->
+
+
+    <script src="http://d3js.org/d3.v2.js"></script>
+    <script src="network-graph.js"></script>
+    <script src="app.js"></script>
+    <script src="step-shortest.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"></script>
+
+  </body>
+</html>

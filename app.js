@@ -1,5 +1,6 @@
 "use strict";
 
+
 var networkNodes = [{label: "A"}];
 
 var lastName = "A";
@@ -21,7 +22,7 @@ var graph = networkGraph()
 
 var networkLinks = graph.links();
 
-var container = d3.select('#chart')
+var container = d3.select("#chart")
   .call(graph);
 
 
@@ -154,14 +155,20 @@ function resultGraph() {
   }
   console.log(networkNodes);
   console.log(graphs);
-  d3.select('#chart2').selectAll("div").data(graphs)
-    .enter().append('div')
-      .each(function (d) {
-        console.log("hi!");
-        var graph = networkGraph()
-          .height(200)
-          .nodes(d.nodes)
-          .links(d.links);
-        d3.select(this).call(graph);
-      });
+
+  // Don't know why this isn't working properly so let's just do this
+  d3.select("#chart2").selectAll("div").remove();
+
+  var paths = d3.select("#chart2").selectAll("div").data(graphs);
+
+  paths.enter().append("div").each(function (d) {
+    console.log("hi!");
+    var graph = networkGraph()
+      .height(200)
+      .nodes(d.nodes)
+      .links(d.links);
+    d3.select(this).call(graph);
+  });
+
+  paths.exit().remove();
 }

@@ -101,7 +101,7 @@ function networkGraph() {
         .size([width, height])
         .nodes(nodes) // initialize with a single node
         .linkDistance(400)
-        .charge(-400)
+        .charge(-300)
         .on("tick", tick);
 
     // line displayed when dragging new nodes
@@ -231,10 +231,10 @@ function networkGraph() {
       var costGroup = linkGroup.append("g");
       costGroup.append("rect")
         .attr("class", "cost-rect")
-        .attr("width", "20")
-        .attr("height", "20")
-        .attr("x", "-10")
-        .attr("y", "-10")
+        .attr("width", "16")
+        .attr("height", "16")
+        .attr("x", "-8")
+        .attr("y", "-8")
 
       costGroup.append("text")
         .attr("text-anchor", "middle")

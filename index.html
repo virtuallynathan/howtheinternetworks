@@ -7,8 +7,6 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <title>Learn about the Internet!</title>
 
-<link rel="stylesheet" href="app.css">
-<script src="http://d3js.org/d3.v2.js"></script>
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -57,32 +55,33 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">The Internet</a>
+          <a class="navbar-brand" href="index.html">The Internet</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-header">What runs the Internet?</li>
-                <li><a href="#homegateway">Home Gateway</a></li>
-                <li><a href="#modem">Modem</a></li>
-                <li><a href="#cmts">Subscriber Line Termination</a></li>
-                <li><a href="#switch">Aggregation Switch</a></li>
-                <li><a href="#edgerouter">Edge Router</a></li>
-                <li><a href="#corerouter">Core Router</a></li>
-                <li><a href="#optical">Optical Transport</a></li>
+                <li><a href="index.html#homegateway">Home Gateway</a></li>
+                <li><a href="index.html#modem">Modem</a></li>
+                <li><a href="index.html#cmts">Subscriber Line Termination</a></li>
+                <li><a href="index.html#switch">Aggregation Switch</a></li>
+                <li><a href="index.html#edgerouter">Edge Router</a></li>
+                <li><a href="index.html#corerouter">Core Router</a></li>
+                <li><a href="index.html#optical">Optical Transport</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Where is the Internet?</li>
-                <li><a href="#equinix">Carrier Hotels</a></li>
-                <li><a href="#exchanges">Internet Exchanges</a></li>
+                <li><a href="index.html#equinix">Carrier Hotels</a></li>
+                <li><a href="index.html#exchanges">Internet Exchanges</a></li>
                 <li class="dropdown-header">Relationships on the Internet?</li>
-                <li><a href="#transit">Transit</a></li>
-                <li><a href="#peering">Peering</a></li>
-                <li><a href="#tiers"> Tiers</a></li>
+                <li><a href="index.html#transit">Transit</a></li>
+                <li><a href="index.html#peering">Peering</a></li>
+                <li><a href="index.html#tiers"> Tiers</a></li>
               </ul>
             </li>
+            <li><a href="ospf.html">Dijkstra's algorithm</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -358,52 +357,6 @@
     </div>
     </div>
 
-
-             <div class="jumbotron">
-        <h1>Routing</h1>
-        <p> 
-           Routing and ASs (EGP/IGP, BGP, OSPF Simulator) <br/>
-
-       </p>
-        <p>Lets go!</p>
-      </div>
-          <div class="media">
-      <a class="pull-left" href="#routing" id="routing">
-        <img class="media-object" src="bootstrap/img/ospf.png" alt="OSPF Network" style="max-height: 1300px; max-width: 750px;">
-      </a>
-      <div class="media-body">
-        <h4 class="media-heading">OSPF</h4>
-       OSPF is an implementation of the shortest path first algorithm invented by <a href="http://www-history.mcs.st-andrews.ac.uk/Biographies/Dijkstra.html">Edsger Dijkstra.</a> The algorithm is designed to find the shortest path through a graph with non-negative edge path costs, which produces a shortest path tree.
-        <br/> <br/>
-        We have built an OSPF simulator using <a href="http://d3js.org/">D3.js</a> and JavaScript:
-        <br/> <br/>
-
-
-    </div>
-        <div> <!-- Hamish in the house -->
-
-  <div id="chart" style="float: left;">
-  <h1 style="text-align: center;">Network</h1>
-  </div>
-  <div id="chart2" style="float: left;">
-  <h1 style="text-align: center;">Shortest paths</h1>
-  </div>
-  <!--<div id="chart3" style="float: left;">
-  <h1 style="text-align: center;">Visited</h1>
-  </div>
-  <div id="chart4" style="float: left;">
-  <h1 style="text-align: center;">Shortest paths</h1>
-  </div>-->
-<script src="networkGraph.js"></script>
-<script src="app.js"></script>
-<div style="clear: both;">
-<input name="from-node" id="from-node" value=""/>
-<button type="button" onclick="shortestPath();">Do it up</button>
-</div>
-
-    <!-- Hamish has left the building -->
-    <br/> <br/><br/> <br/><br/> <br/><br/> <br/>
-    </div>
 
              <div class="jumbotron">
         <h1>Exploring the Internet</h1>
