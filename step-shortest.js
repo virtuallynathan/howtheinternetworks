@@ -83,7 +83,6 @@ function shortestWrapper() {
         state = 1;
         break;
       case 3:
-        alert("lets get this shit done");
         resultGraph();
         break;
     }
